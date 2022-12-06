@@ -1,5 +1,7 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.JOptionPane;
+
 public class ExceptionsDemo {
 
     /*
@@ -18,6 +20,11 @@ public class ExceptionsDemo {
             // This is where the Exception is actually thrown.
             throw new Exception();
         }
+    }
+    static void testPositive(int y) throws NegativeNumberException {
+    	if(y < 0) {
+    		throw new NegativeNumberException();
+    	}
     }
 
     /*
@@ -42,7 +49,7 @@ public class ExceptionsDemo {
 try {
 	testFiveOrGreater(3);
 } catch (Exception e) {
-e.printStackTrace();
+
 }
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
@@ -57,12 +64,14 @@ e.printStackTrace();
 
         // 4. Run the program. Did the stack trace print out?
 
+try {
+	testPositive(-1);
+} catch (NegativeNumberException e) {
+	e.scaryPopup();
+}
+finally {JOptionPane.showMessageDialog(null, "Your Computer is safe");}
     }
-    static void testPositive(int y) throws NegativeNumberException {
-    	if(y < 0) {
-    		throw new NegativeNumberException();
-    	}
-    }
+    
 
     /*
      * 5. Create your own exception by making a new class called
@@ -97,6 +106,9 @@ e.printStackTrace();
      * 10. Try running the program. Did it show a pop-up?
      */
 
+    
+    
+    
     /*
      * 11. Add a finally block after your catch block(Hint: finally{}). A
      * finally block always occurs after a try/catch block even if no exception
@@ -109,3 +121,4 @@ e.printStackTrace();
      * exceptions.
      */
 }
+
