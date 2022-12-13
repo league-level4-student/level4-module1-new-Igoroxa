@@ -44,6 +44,7 @@ public class TextFunkifierTest {
 
     @Test
     public void testCustomString() {
-
+    	customString custom = new customString("unpunctuated string");
+    	assertEquals("Unpunctuated string", custom.funkifyText());
     }
 }
