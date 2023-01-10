@@ -13,7 +13,7 @@ import junit.framework.TestCase;
  * checked.
  * 
  * 2. Create a Doctor abstract class capable of doing medicine, holding a list 
- * of assigned Patients, assigning patients to the list and getting the list.
+ * of assigned Patients, assigning patients to the list and getting the list.0000000000000000
  * 
  * 3. Create a subclass of Doctor called GeneralPractitioner capable of making 
  * house calls.
