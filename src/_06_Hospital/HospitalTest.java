@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.TestCase;
@@ -13,7 +14,7 @@ import junit.framework.TestCase;
  * checked.
  * 
  * 2. Create a Doctor abstract class capable of doing medicine, holding a list 
- * of assigned Patients, assigning patients to the list and getting the list.0000000000000000
+ * of assigned Patients, assigning patients to the list and getting the list.
  * 
  * 3. Create a subclass of Doctor called GeneralPractitioner capable of making 
  * house calls.
@@ -33,6 +34,7 @@ import junit.framework.TestCase;
 public class HospitalTest extends TestCase {
 
     private Hospital testHospital = new Hospital();
+    ArrayList <Patient> patients = new ArrayList <Patient>();
 
     public void testAddDoctor() {
         testHospital.addDoctor(new GeneralPractitioner());
@@ -72,6 +74,7 @@ public class HospitalTest extends TestCase {
     // When you check a patient's pulse, they feel cared for
     public void testCheckPulse() throws Exception {
         Patient testPatient = new Patient();
+     
         //Note: Accessors for booleans typically don't use "get"
         assertEquals(false, testPatient.feelsCaredFor());
         testPatient.checkPulse();
@@ -108,6 +111,18 @@ public class HospitalTest extends TestCase {
 
     // Add 3 Doctors and 8 Patients to the testHospital for this test
     public void test8Patients() throws Exception {
+    	
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addPatient(new Patient());
+testHospital.addDoctor(new Surgeon());
+testHospital.addDoctor(new Surgeon());
+testHospital.addDoctor(new Surgeon());
 
         testHospital.assignPatientsToDoctors();
 

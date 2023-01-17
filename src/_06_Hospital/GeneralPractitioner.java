@@ -2,9 +2,19 @@ package _06_Hospital;
 
 public class GeneralPractitioner extends Doctor {
 
-	public void assignPatient(Patient patient) {
-		// TODO Auto-generated method stub
-		
+	Boolean makeHouseCalls = false;
+	
+
+	public Object makesHouseCalls() {
+	makeHouseCalls = true;
+		return makeHouseCalls;
 	}
+
+
+	public Object performsSurgery() {
+		
+		return false;
+	}
+
 
 }
