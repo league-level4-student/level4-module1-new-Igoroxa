@@ -8,7 +8,15 @@ List <Doctor> docs = new ArrayList<Doctor>();
 List <Patient> fulllist = new ArrayList<Patient>();
 	public void assignPatientsToDoctors() {
 		for (int i = 0; i < docs.size(); i++) {
-			docs.get(i).assignPatient(fulllist.get(i));
+			for (int j = 0; j < fulllist.size(); j++) {
+				try {
+					docs.get(i).assignPatient(fulllist.get(j));
+				} catch (DoctorFullException e) {
+					i++;
+					j--;
+				}
+			
+			}
 		}
 		
 	}

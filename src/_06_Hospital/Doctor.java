@@ -23,6 +23,7 @@ public abstract class Doctor {
 		}
 		else {
 			throw new DoctorFullException("Doctor can only have 3 patients.");
+			
 		}
 		
 	}
